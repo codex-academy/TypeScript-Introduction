@@ -57,11 +57,36 @@ Then run the `tsc -w` command and see what happens if you make changes to your `
 
 ## Using TypeScript with Atom
 
-???
+You can install the `atom-typescript` Atom plugin. Go to the Atom Edit Menu, click on preferences. Then go to install and search for 'typescript' (press enter after you entered 'typescript'). Then install the `atom-typescript` plugin by clicking the blue button.
 
+Test your `greet.ts` function to see if you get errors in Atom now.
+
+Other IDE's with good TypeScript support are VS Code and IntelliJ WebStorm.
+
+## TypeScript folder setup
+
+You are going to create seperate folders for the TypeScript and JavaScript source files. You will write the TypeScript
+
+Add an `outDir` and an `include` attributes.
+
+Your `tsconfig.json` file should look like this:
+
+```
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "outDir": "dist",
+        "noImplicitAny": false,
+        "sourceMap": false
+    },
+    "include": [
+        "src/**/*"
+    ]
+}
+```
 
 ## Installed repositories
 
 `npm install --save express`
 `npm install --save @types/express`
-
